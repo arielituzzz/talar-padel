@@ -1,0 +1,55 @@
+.formSetPlayers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  legend {
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__containerInputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &__sides {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 15px;
+      input {
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+  &__submit {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    button {
+      background-color: transparent;
+      border: transparent;
+      color: whitesmoke;
+      svg {
+        color: whitesmoke;
+      }
+    }
+    button:hover {
+      color: black;
+    }
+    &__btn {
+      font-size: 1rem;
+      color: whitesmoke;
+      padding: 3px 7px;
+      background-color: transparent;
+      border: transparent;
+    }
+  }
+}
+.disabled {
+  pointer-events: none;
+}

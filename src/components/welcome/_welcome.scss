@@ -1,0 +1,65 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__containerTitle {
+    &__text {
+      font-size: 2rem;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      label {
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      select {
+        font-size: 2rem;
+      }
+    }
+    &__submit {
+      button {
+        background-color: transparent;
+        border: transparent;
+      }
+      &__btn {
+        font-size: 1rem;
+        color: whitesmoke;
+        padding: 3px 7px;
+      }
+    }
+  }
+}
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+/* TABLET························································································································ */
+@media (min-width: 768px) {
+  .welcome {
+    &__form {
+      &__input {
+        select {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+/* DESKTOP ······················································································································· */
+@media (min-width: 1024px) {
+  .app {
+    background-color: rgb(7, 7, 7);
+  }
+}
