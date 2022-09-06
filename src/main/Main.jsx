@@ -5,7 +5,9 @@ import SetPlayers from "../components/setPlayers/SetPlayers";
 import Teams from "../components/teams/Teams";
 import "./_main.scss";
 import logo from "../assets/img/logo_padel.png";
+import logoDev from "../assets/img/logoEmpresa-transparente.png";
 import Form4Players from "../components/setPlayers/formPlayers/Form4Players";
+import Form6Players from "../components/setPlayers/formPlayers/Form6Players";
 import Form8Players from "../components/setPlayers/formPlayers/Form8Players";
 import Form12Players from "../components/setPlayers/formPlayers/Form12Players";
 import Form16Players from "../components/setPlayers/formPlayers/Form16Players";
@@ -36,20 +38,31 @@ const Main = () => {
   };
 
   const lottery = (list1, list2) => {
-    setShowAnimation(true);
-    const listDrive = list1.sort(() => Math.random() - 0.5);
-    setListPlayersDriveRandom(listDrive);
-    const listReves = list2.sort(() => Math.random() - 0.5);
-    setListPlayersRevesRandom(listReves);
-    setTimeout(() => {
-      setShowAnimation(false);
-    }, 3000);
+    if (numberPlayers !== "0") {
+      setShowAnimation(true);
+      const listDrive = list1.sort(() => Math.random() - 0.5);
+      setListPlayersDriveRandom(listDrive);
+      const listReves = list2.sort(() => Math.random() - 0.5);
+      setListPlayersRevesRandom(listReves);
+      setTimeout(() => {
+        setShowAnimation(false);
+      }, 3000);
+    }
   };
 
   const getInputs = () => {
     if (numberPlayers === "4") {
       return (
         <Form4Players
+          setPlayersDrive={setPlayersDrive}
+          setPlayersReves={setPlayersReves}
+          lottery={lottery}
+        />
+      );
+    }
+    if (numberPlayers === "6") {
+      return (
+        <Form6Players
           setPlayersDrive={setPlayersDrive}
           setPlayersReves={setPlayersReves}
           lottery={lottery}
@@ -127,6 +140,12 @@ const Main = () => {
       <Route exact path="/teams">
         <SetResults getResults={getResults} />
       </Route>
+      <footer className="footer">
+        <a href="mailto:info.sudevsolutions@gmail.com">
+          &#9426; Desarrollado por <img src={logoDev} alt="logo-Dev" /> 2022
+        </a>
+        <p>Version 1.0.0</p>
+      </footer>
     </div>
   );
 };

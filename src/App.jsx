@@ -1,7 +1,7 @@
 import "./style.scss";
 import "./_app.scss";
 import Main from "./main/Main";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

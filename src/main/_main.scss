@@ -6,9 +6,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
   &__img {
     width: 300px;
+  }
+}
+.footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    text-decoration: none;
+    color: black;
+    img {
+      width: 130px;
+    }
+  }
+  p {
+    font-weight: 600;
   }
 }
 
