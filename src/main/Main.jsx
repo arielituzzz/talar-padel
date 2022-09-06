@@ -5,7 +5,6 @@ import SetPlayers from "../components/setPlayers/SetPlayers";
 import Teams from "../components/teams/Teams";
 import "./_main.scss";
 import logo from "../assets/img/logo_padel.png";
-import logoDev from "../assets/img/logoEmpresa-transparente.png";
 import Form4Players from "../components/setPlayers/formPlayers/Form4Players";
 import Form6Players from "../components/setPlayers/formPlayers/Form6Players";
 import Form8Players from "../components/setPlayers/formPlayers/Form8Players";
@@ -13,6 +12,7 @@ import Form12Players from "../components/setPlayers/formPlayers/Form12Players";
 import Form16Players from "../components/setPlayers/formPlayers/Form16Players";
 import WaitAnimation from "../components/waitAnimation/WaitAnimation";
 import SetResults from "../components/setResults/SetResults";
+import Footer from "../footer/Footer";
 
 const Main = () => {
   const [numberPlayers, setNumberPlayers] = useState([]);
@@ -140,12 +140,7 @@ const Main = () => {
       <Route exact path="/teams">
         <SetResults getResults={getResults} />
       </Route>
-      <footer className="footer">
-        <a href="mailto:info.sudevsolutions@gmail.com">
-          &#9426; Desarrollado por <img src={logoDev} alt="logo-Dev" /> 2022
-        </a>
-        <p>Version 1.0.0</p>
-      </footer>
+      <Footer />
     </div>
   );
 };

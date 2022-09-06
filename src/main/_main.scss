@@ -10,25 +10,6 @@
     width: 300px;
   }
 }
-.footer {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  column-gap: 40px;
-  a {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-    text-decoration: none;
-    color: black;
-    img {
-      width: 130px;
-    }
-  }
-  p {
-    font-weight: 600;
-  }
-}
 
 /* TABLET························································································································ */
 @media (min-width: 768px) {
@@ -42,6 +23,6 @@
 /* DESKTOP ······················································································································· */
 @media (min-width: 1024px) {
   .app {
-    background-color: rgb(7, 7, 7);
+    background-color: #3dcc3d;
   }
 }

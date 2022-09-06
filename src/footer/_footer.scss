@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+  width: 100%;
+  margin-top: 20px;
+  a {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    text-decoration: none;
+    color: black;
+    img {
+      width: 130px;
+    }
+  }
+  p {
+    font-weight: 600;
+  }
+}
