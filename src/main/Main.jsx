@@ -40,10 +40,23 @@ const Main = () => {
   const lottery = (list1, list2) => {
     if (numberPlayers !== "0") {
       setShowAnimation(true);
-      const listDrive = list1.sort(() => Math.random() - 0.5);
-      setListPlayersDriveRandom(listDrive);
-      const listReves = list2.sort(() => Math.random() - 0.5);
-      setListPlayersRevesRandom(listReves);
+
+      let numberLottery = Math.floor(Math.random() * 50);
+      // console.log(numberLottery);
+
+      for (let i = 0; i <= numberLottery; i++) {
+        const listDrive = list1.sort(() => Math.random() - 0.5);
+        setListPlayersDriveRandom(listDrive);
+      }
+
+      numberLottery = Math.floor(Math.random() * 50);
+      // console.log(numberLottery);
+
+      for (let i = 0; i <= numberLottery; i++) {
+        const listReves = list2.sort(() => Math.random() - 0.5);
+        setListPlayersRevesRandom(listReves);
+      }
+
       setTimeout(() => {
         setShowAnimation(false);
       }, 3000);
