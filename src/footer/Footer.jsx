@@ -8,7 +8,7 @@ const Footer = () => {
       <a href="mailto:info.sudevsolutions@gmail.com">
         &#9426; Desarrollado por <img src={logoDev} alt="logo-Dev" /> 2022
       </a>
-      <p>Version 1.0.0</p>
+      <p>Version 1.0.1</p>
     </footer>
   );
 };
