@@ -2,11 +2,12 @@ import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "./_welcome.scss";
 
-const Welcome = ({ getNumberPlayers }) => {
+const Welcome = ({ getNumberPlayers, getTypeLottery }) => {
   const reference = useRef({});
   const handleSubmit = (e) => {
     e.preventDefault();
     getNumberPlayers(reference.current.numberPlayers.value);
+    getTypeLottery(reference.current.typeLottery.value);
   };
   return (
     <div className="welcome animate__animated animate__fadeIn">
@@ -22,6 +23,11 @@ const Welcome = ({ getNumberPlayers }) => {
             <option value="8">8</option>
             <option value="12">12</option>
             <option value="16">16</option>
+          </select>
+          <label>Tipo de Sorteo</label>
+          <select ref={(e) => (reference.current.typeLottery = e)}>
+            <option value="CON LADOS">Con Lados</option>
+            <option value="SIN LADOS">Sin Lados</option>
           </select>
         </div>
         <div className="welcome__form__submit">
